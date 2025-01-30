@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { puppyList } from "./data";
 import "./App.css";
+import "./index.css";
 
 function App() {
   const [puppies, setPuppies] = useState(puppyList);
@@ -14,6 +15,7 @@ function App() {
       {featPupId && (
         <div>
           <h2>{featuredPup.name}</h2>
+          <img src={featuredPup.image} alt={featuredPup.name} />
           <ul>
             <li>Age: {featuredPup.age}</li>
             <li>Email: {featuredPup.email}</li>
